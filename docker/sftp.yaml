@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  sftp:
+    image: atmoz/sftp
+    platform: linux/arm64
+    ports:
+      - "2222:22"
+    command: demo:demo:::upload
