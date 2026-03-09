@@ -1,18 +1,6 @@
-def decorator(func):
-    def wrapper():
-        print("first love")
-        func()
-        print('last love')
-    return wrapper
+nums = range(10)
 
-
-@decorator
-def printHello():
-    print("hello kajal")
-
-
-
-
-# decorator(printHello)()
-printHello()
+squared = (x*x for x in nums)
+evens = (x for x in squared if x % 2 == 0)
+print(next(evens),evens.__next__())
  
