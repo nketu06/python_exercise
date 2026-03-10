@@ -1,27 +1,18 @@
-import time
-
-
-def fetch_data(param):
-    print(f"Do something with {param}...")
-    time.sleep(param)
-    print(f"Done with {param}")
-    return f"Result of {param}"
-
-
-def main():
-    result1 = fetch_data(1)
-    print("Fetch 1 fully completed")
-    result2 = fetch_data(2)
-    print("Fetch 2 fully completed")
-    return [result1, result2]
-
-
-t1 = time.perf_counter()
-
-results = main()
-print(results)
-
-t2 = time.perf_counter()
-print(f"Finished in {t2 - t1:X>10.2f} seconds")
-
-
+class Range:
+    def __init__(self,start,end):
+        self.start=start
+        self.end=end
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.start>=self.end:
+            raise StopIteration
+        curr = self.start
+        self.start+=1
+        return curr
+    
+r = Range(3,9)
+for i in range(3,8):
+    print(i)
