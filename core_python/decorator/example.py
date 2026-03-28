@@ -62,3 +62,11 @@ print(test(a=5,b=6))
 print(test.__name__)
 print(test.__doc__) 
 
+
+
+# @wraps preserves:
+
+# __name__
+# __doc__
+# __module__
+# signature
