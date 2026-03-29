@@ -1,8 +1,1 @@
-import asyncio
-
-async def f():
-    print("done")
-    await asyncio.sleep(3)
-    print("done")
-
-asyncio.run(f())
+print(2712845780%8)
